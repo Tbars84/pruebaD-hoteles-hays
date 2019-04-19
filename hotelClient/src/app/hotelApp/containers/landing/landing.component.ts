@@ -18,4 +18,7 @@ export class LandingComponent implements OnInit {
       }, 1500);
     })
   }
+  filteredHotelByName(name) {
+    // this._hotelSrv
+  }
 }

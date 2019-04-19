@@ -12,4 +12,9 @@ export class GetHotelDataSrv {
     const response = await this._http.get<hotelIn[]>('http://localhost:3030/api/hoteles').toPromise()
     return response;
   }
+  async getHotelByName(name):Promise<hotelIn[]>{
+    const response = await this._http.get<hotelIn[]>('http://localhost:3030/api/hoteles/').toPromise()
+    return response;
+  }
+
 }

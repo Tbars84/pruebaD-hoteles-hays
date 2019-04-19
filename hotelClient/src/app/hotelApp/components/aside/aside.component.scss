@@ -24,6 +24,9 @@ form {
   p{
     font-size: 0.8rem;
   }
+  i.fa.fa-star {
+    color: #ffc000;
+  }
 }
 .form-group {
   display: flex;
@@ -40,6 +43,7 @@ form {
 }
 .form-check{
   padding-left: 10%;
+  line-height: 1.8rem;
   i.fa.fa-star {
     color: #ffc000;
   }
