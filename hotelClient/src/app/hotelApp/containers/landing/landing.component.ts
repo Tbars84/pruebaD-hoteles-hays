@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetHotelDataSrv } from '../../../services/hotelServices';
+import { hotelIn } from '../../../models/interfaces';
 
 @Component({
   selector: 'app-landing',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-
-  constructor() { }
+  hotelData: hotelIn[];
+  constructor(private _hotelSrv: GetHotelDataSrv) { }
 
   ngOnInit() {
+    this._hotelSrv.getAllHotels()
+    .then(data => {
+      this.hotelData = data;
+    })
   }
 
 }
