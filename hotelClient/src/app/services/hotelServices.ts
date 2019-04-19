@@ -8,8 +8,8 @@ export class GetHotelDataSrv {
 
   constructor(private _http: HttpClient) {}
 
-  async getAllHotels(): Promise<hotelIn[]>{
-    const response = await this._http.get('http://localhost:3030/api/hoteles').toPromise()
+  async getAllHotels():Promise<hotelIn[]>{
+    const response = await this._http.get<hotelIn[]>('http://localhost:3030/api/hoteles').toPromise()
     return response;
   }
 }

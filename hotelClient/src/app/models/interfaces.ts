@@ -4,6 +4,5 @@ export interface hotelIn {
   stars: number,
   price: number,
   image: string,
-  amenities?: string[],
-  goalsReceive?: number,
+  amenities?: string[]
 }

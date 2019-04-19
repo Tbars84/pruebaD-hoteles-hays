@@ -10,14 +10,12 @@ import { hotelIn } from '../../../models/interfaces';
 export class LandingComponent implements OnInit {
   hotelData: hotelIn[];
   constructor(private _hotelSrv: GetHotelDataSrv) { }
-
   ngOnInit() {
     this._hotelSrv.getAllHotels()
     .then(data => {
-      this.hotelData = data;
-      console.log(this.hotelData);
-      
+      setTimeout(() => {
+        this.hotelData = data;
+      }, 1500);
     })
   }
-
 }

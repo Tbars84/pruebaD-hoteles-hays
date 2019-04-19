@@ -7,7 +7,7 @@ import { hotelIn } from '../../../models/interfaces';
   styleUrls: ['./storage.component.scss']
 })
 export class StorageComponent implements OnInit {
-  @Input() storage: hotelIn[];
+  @Input() private storage: hotelIn[];
   constructor() { }
 
   ngOnInit() {

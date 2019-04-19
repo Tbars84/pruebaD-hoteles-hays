@@ -1,0 +1,14 @@
+header{
+  background-color: #003478;
+  min-height: 80px;
+}
+.container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1%;
+  img{
+    display: block;
+  }  
+}
+// @media (min-width: 768px) { ... }
