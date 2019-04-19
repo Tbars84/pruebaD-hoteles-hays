@@ -1,0 +1,26 @@
+{
+  "name": "pruebad-hoteles-hays",
+  "version": "1.0.0",
+  "description": "Prueba de desarrollo Hoteles Hays",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tbars84/pruebaD-hoteles-hays.git"
+  },
+  "author": "Camilo Tabares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tbars84/pruebaD-hoteles-hays/issues"
+  },
+  "homepage": "https://github.com/Tbars84/pruebaD-hoteles-hays#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
