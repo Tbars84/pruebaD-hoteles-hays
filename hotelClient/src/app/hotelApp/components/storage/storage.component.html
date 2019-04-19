@@ -1,3 +1,8 @@
-<p>
-  storage works!
-</p>
+
+<ng-container *ngIf="storage; then storageLoaded; else storagePending"></ng-container>
+<ng-template #storagePending>
+  <img src="./assets/circles.svg" >
+</ng-template>
+<ng-template #storageLoaded>
+  Lodaded!
+</ng-template>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { hotelIn } from '../../../models/interfaces';
 
 @Component({
   selector: 'app-storage',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./storage.component.scss']
 })
 export class StorageComponent implements OnInit {
-
+  @Input() storage: hotelIn[];
   constructor() { }
 
   ngOnInit() {
+    console.log(this.storage);
   }
 
 }

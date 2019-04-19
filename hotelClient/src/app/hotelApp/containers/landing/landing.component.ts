@@ -15,6 +15,8 @@ export class LandingComponent implements OnInit {
     this._hotelSrv.getAllHotels()
     .then(data => {
       this.hotelData = data;
+      console.log(this.hotelData);
+      
     })
   }
 
