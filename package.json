@@ -4,7 +4,9 @@
   "description": "Prueba de desarrollo Hoteles Hays",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "client": "cd hotelClient && ng serve -o",
+    "start-all": "concurrently \"nodemon src/index.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   "homepage": "https://github.com/Tbars84/pruebaD-hoteles-hays#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "concurrently": "^4.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.11"
