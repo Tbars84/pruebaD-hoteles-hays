@@ -6,7 +6,11 @@
         <app-aside></app-aside>
       </div>
       <div class="col-lg-8 col-md-12">
-        <app-storage [storage]="hotelData" ></app-storage>
+        <app-storage 
+          [storage]="hotelData" 
+          [loadMoreStatus]="loadMoreStatus" 
+          (loadMoreReq) = "loadMoreReq($event)"
+        ></app-storage>
       </div>
     </div>  
   </div>

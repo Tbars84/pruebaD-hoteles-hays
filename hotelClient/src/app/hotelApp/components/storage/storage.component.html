@@ -4,7 +4,7 @@
   <img class="rounded mx-auto d-block" src="./assets/circles.svg" >
 </ng-template>
 <ng-template #storageLoaded>
-  <div class="card w-100" *ngFor="let hotel of storage;">
+  <div class="card w-100" *ngFor="let hotel of storage">
     <div class="card-body">
       <div class="row">
         <div class="col-lg-4 colmd-12 image-container">
@@ -31,21 +31,12 @@
       </div>
     </div>
   </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <hr>
+  
+  <div class="row">
+    <div class="col-12 loadWrapperBtn" *ngIf="loadMoreStatus.available">
+        <button id="loadNews" type="button" class="btn btn-light" (click)="emitNewReq()">Load More...</button>
+    </div>
+  </div> 
+ 
 </ng-template>
