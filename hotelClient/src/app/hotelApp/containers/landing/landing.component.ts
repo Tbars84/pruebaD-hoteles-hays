@@ -19,7 +19,6 @@ export class LandingComponent implements OnInit {
       setTimeout(() => {
         this.hotelData = res.data;
         this.loadMoreStatus = res.loadMoreEv;
-
       }, 1500);
     })
     .catch((err)=>{
@@ -39,7 +38,12 @@ export class LandingComponent implements OnInit {
       console.log(err);
     })
   }
-  // filteredHotelByName(name) {
-  //   // this._hotelSrv
-  // }
+
+  loadfilteredReq(name) {
+    this._hotelSrv.getHotelByName(name)
+    .then(res => {
+      this.hotelData = [];
+      this.hotelData = res;
+    })
+  }
 }

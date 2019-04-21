@@ -23,7 +23,7 @@ app.use(express.json())
 // ROUTES
 app.use(require('./routes/index'))
 app.use('/api/hoteles' , require('./routes/hotels'))
-app.use('/api/filtered/hotel' , require('./routes/filteredHotels'))
+app.use('/api/hoteles/filtered' , require('./routes/filteredHotels'))
 
 
 // INICANDO LA URL DE LA API

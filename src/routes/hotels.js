@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 const hotelesData = require('../data.json')
 
-router.get('/', (req , res , next)=>{
+router.get('/', (req , res)=>{
   let { skip, limit } = req.query
   skip = parseInt(skip) || 0;
   limit = parseInt(limit)|| 20;

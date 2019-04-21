@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ReactiveFormsModule } from '@angular/forms';
 // SERVICES
 import { GetHotelDataSrv } from '../services/hotelServices';
 // COMPONENTS
@@ -18,7 +18,8 @@ import { StorageComponent } from './components/storage/storage.component';
     StorageComponent
   ],
   imports : [
-  CommonModule
+  CommonModule,
+  ReactiveFormsModule
   ],
   exports : [
     LandingComponent

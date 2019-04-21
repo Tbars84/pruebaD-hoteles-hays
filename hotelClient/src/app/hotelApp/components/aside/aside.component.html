@@ -2,17 +2,24 @@
   <h5>Filtros</h5>
 </div>
 
-<form id="nombre-hotel">
+<form id="nombre-hotel" [formGroup]="hotelName" (ngSubmit)="submitHotelName($Event)" >
   <div class="excerpt-form">
     <p><i class="fa fa-search"></i> Nombre del Hotel</p>
   </div>
-  <div class="form-group">
-    <input type="text" />
+  <div class="form-group" >
+    <input 
+      id="name" 
+      formControlName="name"
+      type="text" 
+    />
     <button class="btn btn-primary">Buscar</button>
   </div>
+  <div *ngIf="!hotelName.get('name').valid && hotelName.get('name').touched " class="showErr">
+    Name of the Hotel is required
+  </div>
 </form>
-
-<form id="distincion-estrellas">
+<!-- 
+<form [formGroup]="hotelStars" (ngSubmit)="">
   <div class="excerpt-form">
     <p><i class="fa fa-star"></i> Estrellas del Hotel</p>
   </div>
@@ -57,4 +64,4 @@
     </label>
   </div>
       
-</form>
+</form> -->

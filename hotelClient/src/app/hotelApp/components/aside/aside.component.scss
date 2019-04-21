@@ -48,7 +48,11 @@ form {
     color: #ffc000;
   }
 }
-
+.showErr{
+  padding-left: 5%;
+  font-size: 0.8rem;
+  color: rgb(163, 0, 0);
+}
 
 @media (min-width: 768px) {
   .filtros{

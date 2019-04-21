@@ -3,17 +3,14 @@ const router = Router();
 const hotelesMk = require('../data.json')
 
 router.get('/', (req , res)=>{
-  let response = [];
-  if( typeof req.query.nsfw != 'undefined' ){
-    response = hotelesMk.filter(function(store){
-      if(store.nsfw === true){
-        return store;
-      }
-    });
-  } else {
-    response = stores;
-  }
-  res.json(response);
+  let { hotelName } = req.query
+  hotelName = hotelName.toString()
+  typeof hotelName != undefined || typeof hotelName != null ?
+    response = hotelesMk.filter(function(hotel){
+      return hotel.name == hotelName
+    }) :
+    response = 'not Found';
+    res.json(response);
 })
 
 module.exports = router;
