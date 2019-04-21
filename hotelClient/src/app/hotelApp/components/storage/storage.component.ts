@@ -17,7 +17,7 @@ export class StorageComponent implements OnInit {
   emitNewReq(){
     let newLoadMoreReq: loadMoreStatus = Object();
     // STARTING STATUS
-    let{skip , limit , total, available} =  this.loadMoreStatus;
+    let{skip , limit , total} =  this.loadMoreStatus;
     // PROCESING REQ OBJECT
     newLoadMoreReq.skip = skip +(limit+1);
     newLoadMoreReq.limit = limit*2;

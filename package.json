@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "client": "cd hotelClient && ng serve -o",
+    "deploy-client": "cd hotelClient && ng build",
     "start-all": "concurrently \"nodemon src/index.js\" \"npm run client\""
   },
   "repository": {

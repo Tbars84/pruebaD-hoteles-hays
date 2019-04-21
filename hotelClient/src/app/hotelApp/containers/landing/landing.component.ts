@@ -16,10 +16,8 @@ export class LandingComponent implements OnInit {
     // INITIAL CALL TO THE SERVICE
     this._hotelSrv.getAllHotels()
     .then(res => {
-      setTimeout(() => {
-        this.hotelData = res.data;
-        this.loadMoreStatus = res.loadMoreEv;
-      }, 1500);
+      this.hotelData = res.data;
+      this.loadMoreStatus = res.loadMoreEv;
     })
     .catch((err)=>{
       console.log(err);
@@ -29,16 +27,14 @@ export class LandingComponent implements OnInit {
   loadMoreReq(ev){
     this._hotelSrv.getAllHotels(ev.skip , ev.limit )
     .then(res => {
-      setTimeout(() => {
-        this.hotelData = res.data;
-        this.loadMoreStatus = res.loadMoreEv;
-      }, 1500);
+      this.hotelData = res.data;
+      this.loadMoreStatus = res.loadMoreEv;
     })
     .catch((err)=>{
       console.log(err);
     })
   }
-
+  // FILTERED A SINGLE HOTEL BY NAME
   loadfilteredReq(name) {
     this._hotelSrv.getHotelByName(name)
     .then(res => {
